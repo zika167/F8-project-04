@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Sora", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* :root {
+    --header-bg: #10375C;
+} */
+
+/* common */
+
+.btn:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+} */
+
+input,button,select,textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
