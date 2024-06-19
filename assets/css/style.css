@@ -7,19 +7,35 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-h1,h2,h3,h4 {
-    font-family: "Sora", sans-serif;
-}
-
 html {
     font-size: 62.5%;
 }
 
-/* :root {
-    --header-bg: #10375C;
-} */
+:root {
+    --primary-bg: #FFFAF5;
+}
 
 /* common */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Sora", sans-serif;
+}
+
+.btn {
+    --height: 5.6rem;
+
+    display: inline-block;
+    min-width: 24.6rem;
+    height: var(--height);
+    line-height: calc(var(--height) - 5px);
+    border-radius: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    color: #000958;
+    text-align: center;
+}
 
 .btn:hover {
     opacity: 0.85;
@@ -30,13 +46,91 @@ a {
     text-decoration: none;
 }
 
-/* .container {
+.container {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin: 0 auto;
-} */
+}
 
 input,button,select,textarea {
     font-family: inherit;
     font-size: inherit;
+}
+
+.section-heading__lv1,.section-heading__lv2,.section-heading__lv3 {
+    color: #000958;
+}
+
+.section-heading__lv1 {
+    font-size: 6.6rem;
+    font-weight: 800;
+}
+
+.section-heading__lv2 {
+    font-size: 5.2rem;
+    font-weight: 700;
+}
+
+.section-heading__lv3 {
+    font-weight: 600;
+}
+
+.section-desc__lv1,.section-desc__lv2 {
+    color: #656689;
+    font-weight: 400;
+}
+
+.section-desc__lv1 {
+    font-size: 1.6rem;
+}
+
+.section-desc__lv2 {
+    font-size: 1.4rem;
+}
+
+/* header */
+
+.header {
+    background: var(--primary-bg);
+    padding: 26px 0 ;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 36px;
+}
+
+.nav__link,.header-action__link {
+    color: #5E6085;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+.header-action__link:hover,
+.nav__link:hover {
+    color: #000958;
+    text-shadow: .5px 0 0 currentColor;
+}
+
+.header-action {
+    display: flex;
+    align-items: center;
+}
+
+.header-action__link {
+    margin-right: 25px;
+}
+
+.header-action__btn {
+    --height: 50px;
+
+    min-width: 117px;
+    opacity: 0.6;
 }
