@@ -1010,3 +1010,139 @@ input,button,select,textarea {
 .pricing-item__item:not(:last-child) {
     margin-bottom: 18px;
 }
+
+/* review */
+
+.review__row {
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.review__control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-shrink: 0;
+    width: 5.4rem;
+    height: 5.4rem;
+    color: #FF5B2E;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1.5px solid #FFD1C4;
+    cursor: pointer;
+}
+
+.review__control:hover {
+    color: #fff;
+    border-color: #FF5B2E;
+    background-color: #FF5B2E;
+}
+
+.review__content {
+    overflow: hidden;
+}
+
+.review__list {
+    display: flex;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.review__img-wrap {
+    margin: 0  115px 0 44px;
+    width: 274px;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 0 999px 999px 999px;
+}
+
+.review__img-wrap::before {
+    position: absolute;
+    content: "";
+    background: #FFDA54;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    height: 92%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 999px;
+}
+
+.review__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.review-item__content {
+    margin-right: 76px;
+    width: 55.3rem;
+}
+
+.review__heading {
+    line-height: 6.2rem;
+    margin-bottom: 24px;
+}
+
+.review__content-quote {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+}
+
+.review__content-name {
+    display: flex;
+    column-gap: 8px;
+    margin-top: 34px;
+    color: #282828;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.review__content-name::before {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    background: #000;
+    border-radius: 999px;
+    margin: auto 0;
+}
+
+.review__dots {
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.review__dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    flex-shrink: 0;
+    border-radius: 0.4rem;
+    border: 1px solid #FF5B2E;
+}
+
+.review__dot:hover {
+    background: #FF5B2E;
+    cursor: pointer;
+}
+
+.review__dot--active {
+    width: 2.4rem;
+    background: #FF5B2E;
+}
