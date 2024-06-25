@@ -1031,6 +1031,7 @@ input,button,select,textarea {
     width: 5.4rem;
     height: 5.4rem;
     color: #FF5B2E;
+    padding: 0;
     background-color: transparent;
     border-radius: 50%;
     border: 1.5px solid #FFD1C4;
@@ -1190,6 +1191,8 @@ input,button,select,textarea {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 48px;
+    justify-content: center;
+    align-items: center;
 }
 
 .blog-item__img-wrap {

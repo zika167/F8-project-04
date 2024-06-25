@@ -55,6 +55,7 @@
 
         <!-- styles CSS -->
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- header -->
@@ -62,10 +63,19 @@
             <div class="container">
                 <div class="header__inner">
                     <!-- logo -->
-                    <img src="./assets/img/Logo.svg" alt="Lucy" class="logo" />
+                    <img src="./assets/img/Logo.svg" alt="Lucy" class="logo mobile-logo" />
+
+                    <!-- Tablet/mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </label>
 
                     <!-- navbar -->
-                    <div class="navbar">
+                    <div id="pc-nav" class="navbar">
                         <ul class="nav__list">
                             <li class="nav__item">
                                 <a href="#!" class="nav__link">Home</a>
@@ -82,6 +92,12 @@
                             <li class="nav__item">
                                 <a href="#!" class="nav__link">Contacts us</a>
                             </li>
+                            <li class="show-on-mobile separate">
+                                <a href="#!" class="nav__link">Sign in</a>
+                            </li>
+                            <li class="show-on-mobile">
+                                <a href="#!" class="nav__link">Sign up</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -91,6 +107,45 @@
                         <a href="#!" class="btn header-action__btn">Sign up</a>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <!-- Tablet/mobile header -->
+        <header class="mobile-header">
+            <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden />
+
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="./assets/img/logo.svg" alt="Lucy" />
+                </a>
+
+                <!-- Navigation -->
+                <ul id="mobile-nav menu-drawer__navbar">
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">Services & Rates</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">Review</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">Contacts us</a>
+                    </li>
+                    <li class="show-on-mobile separate">
+                        <a href="#!" class="nav__link">Sign in</a>
+                    </li>
+                    <li class="show-on-mobile"><a href="#!" class="nav__link">Sign up</a></li>
+                </ul>
             </div>
         </header>
 
@@ -747,7 +802,7 @@
             <section class="blog">
                 <div class="container">
                     <div class="blog__top">
-                        <h2 class="section-heading__lv2">Our Blog</h2>
+                        <h2 class="section-heading__lv2" style="text-wrap: nowrap">Our Blog</h2>
                         <div class="blog__info">
                             <p class="section-desc__lv1 blog__desc">
                                 Stay up to date with the latest tech trands and news in the pets.
@@ -828,6 +883,32 @@
                                     beating heart.
                                 </p>
                             </section>
+                        </article>
+
+                        <!-- blog item 4 -->
+                        <article class="blog-item show-on-tablet">
+                            <button class="review__control">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.125 9.99854H16.875"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M11.25 4.37354L16.875 9.99854L11.25 15.6235"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <p class="blog-item__desc">continue ...</p>
                         </article>
                     </div>
                 </div>
@@ -1006,5 +1087,13 @@
                 </div>
             </div>
         </footer>
+
+        <!-- <script>
+            const pcNav = document.querySelector("#pc-nav");
+            const mobileNav = document.querySelector("#mobile-nav");
+
+            // Copy from PC nav -> Mobile nav
+            mobileNav.innerHTML = pcNav.innerHTML;
+        </script> -->
     </body>
 </html>
